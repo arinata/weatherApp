@@ -1,0 +1,151 @@
+body{
+    background-color: #59c3ee;
+    height: 100%;
+}
+
+.body-Content{
+    border: red;
+    border-style: dashed;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 1000px;
+}
+
+.contentHeader{
+    height: 110px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.findCityButton{
+    width: 160px;
+    height: 110px;
+    font-size: 5em;
+    color: #ffffff;
+    text-align: center;
+    align-self: center;
+    z-index: 9;
+}
+
+.findCityButton:hover{
+    cursor: pointer;
+    color: #999;
+}
+
+.cityNameBlock{
+    align-self: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+    height: 100%;
+    width: 90%;
+}
+
+.currentStatusBlock{
+    display: grid;
+    grid-template-columns: 320px 320px;
+    padding-left: 40px;
+    padding-right: 80px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.weatherIcon{
+    justify-self: end;
+    align-self: center;
+    margin-right: 16px;
+    font-size: 160px;
+}
+
+.temperature{
+    margin-left: 16px;
+    font-size: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.deg{
+    font-size: 40px;
+    padding-top: 30px;
+}
+
+#separator{
+    height: 60px;
+}
+
+#separatorForecast{
+    height: 40px;
+}
+
+.forecastContainer{
+    display: grid;
+    grid-template-columns: 100px 400px 180px;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #ffffff;
+}
+
+.iconForecast{
+    font-size: 75px;
+}
+
+.forecastData{
+    font-size: 27px;
+    align-self: center;
+}
+
+.forecastTemp{
+    font-size: 27px;
+    align-self: center;
+    justify-self: end;
+}
+
+
+
+.searchBlock {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 25px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(255,255,255); /* Fallback color */
+    background-color: #59c3ee; /* Black w/ opacity */
+}
+
+.searchContainer{
+    display: grid;
+    grid-template-columns: 450px 30px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchBox{
+    justify-self: center;
+    height: 50px;
+    width: 500px;
+    font-size: 2.7em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.checkButton{
+    width: 160px;
+    height: 110px;
+    font-size: 3.5em;
+    color: #ffffff;
+    text-align: center;
+    align-self: center;
+}
+
+.checkButton:hover{
+    cursor: pointer;
+    color: #999;
+}

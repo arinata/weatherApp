@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="appStyle.css">
+        <script src="https://kit.fontawesome.com/9e6cf8efe9.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="searchPage" class="searchBlock">
+            <div class="searchContainer">
+                <input type="text" class="searchBox" placeholder="Enter city name">
+                <div class="checkButton">
+                    <span class="fas fa-check"></span>
+                </div>
+            </div>
+            
+        </div>
+        <div id="contentArea" class="body-Content">
+            <div id="contentHeader" class="contentHeader">
+                <div id="findCityButton" class="findCityButton">
+                    <span class="fas fa-search"></span>
+                </div>
+                <div id="cityNameBlock" class="cityNameBlock">Bandung</div>
+            </div>
+            <div id="separator"></div>
+            <div id="currentStatusBlock" class="currentStatusBlock">
+                <div class="weatherIcon">
+                    <i id="weatherIcon"></i>
+                </div>
+                <div class="temperature">
+                    <span id="temperature">--</span>
+                    <span class="deg">&#8451;</span>
+                </div>
+            </div>
+            <div id="separator"></div>
+            <div id="todayForecast" class="forecastContainer">
+                <div id="iconTodayContainer" class="iconForecast">
+                    <i id='iconToday' class="fas fa-sun"></i>
+                </div>
+                <div id="todayForecast" class="forecastData">
+                    <span>Today</span>
+                    <span>-</span>
+                    <span id="todayForecastText">Sunny</span>
+                </div>
+                <div id="todayTemperature" class="forecastTemp">
+                    <span id="todayLowTemp">--</span>
+                    <span>/</span>
+                    <span id="todayHiTemp">--</span>
+                    <span>&#8451;</span>
+                </div>
+            </div>
+            <div id="separatorForecast"></div>
+            <div id="tomorrowForecast"  class="forecastContainer">
+                <div id="iconTomorrowContainer" class="iconForecast">
+                    <i id='iconTomorrow' class="fas fa-sun"></i>
+                </div>
+                <div id="tomorrowForecast" class="forecastData">
+                    <span>Tomorrow</span>
+                    <span>-</span>
+                    <span id="tomorrowForecastText">Thunderstorm</span>
+                </div>
+                <div id="tomorrowTemperature" class="forecastTemp">
+                    <span id="tomorrowLowTemp">--</span>
+                    <span>/</span>
+                    <span id="tomorrowHiTemp">--</span>
+                    <span>&#8451;</span>
+                </div>
+            </div>
+            <div id="separatorForecast"></div>
+            <div id="2daysForecast" class="forecastContainer">
+                <div id="icon2DaysContainer" class="iconForecast">
+                    <i id='icon2Days' class="fas fa-sun"></i>
+                </div>
+                <div id="2DaysForecast" class="forecastData">
+                    <span id="day2">---</span>
+                    <span>-</span>
+                    <span id="2DaysForecastText">Thunderstorm</span>
+                </div>
+                <div id="2DaysTemperature" class="forecastTemp">
+                    <span id="2DaysLowTemp">--</span>
+                    <span>/</span>
+                    <span id="2DaysHiTemp">--</span>
+                    <span>&#8451;</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            let autocomplete;
+            function initAutocomplete(){
+                autocomplete = new google.maps.places.Autocomplete(
+                    document.getElementById('autocomplete'),
+                    {
+                        types: ['establishment'],
+                        componentRestriction: {'country': ['AU']},
+                        fields: ['place_id','geometry','name']
+                    }
+                );
+            }
+        </script>
+        <script src="weatherData.js"></script>
+        
+    </body>
+</html>
