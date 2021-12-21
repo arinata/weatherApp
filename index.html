@@ -5,13 +5,12 @@
         <title>Weather App</title>
         <link rel="stylesheet" href="appStyle.css">
         <script src="https://kit.fontawesome.com/9e6cf8efe9.js" crossorigin="anonymous"></script>
-
     </head>
     <body>
         <div id="searchPage" class="searchBlock">
             <div class="searchContainer">
-                <input type="text" class="searchBox" placeholder="Enter city name">
-                <div class="checkButton">
+                <input id='cityName' type="text" class="searchBox" placeholder="Enter city name">
+                <div id='checkButton' class="checkButton">
                     <span class="fas fa-check"></span>
                 </div>
             </div>
@@ -22,7 +21,7 @@
                 <div id="findCityButton" class="findCityButton">
                     <span class="fas fa-search"></span>
                 </div>
-                <div id="cityNameBlock" class="cityNameBlock">Bandung</div>
+                <div id="cityNameBlock" class="cityNameBlock"></div>
             </div>
             <div id="separator"></div>
             <div id="currentStatusBlock" class="currentStatusBlock">
@@ -34,15 +33,17 @@
                     <span class="deg">&#8451;</span>
                 </div>
             </div>
-            <div id="separator"></div>
+            <div id="separator">
+                <div id="cityNotFound" class="statusMssg">City not found</div>
+            </div>
             <div id="todayForecast" class="forecastContainer">
                 <div id="iconTodayContainer" class="iconForecast">
-                    <i id='iconToday' class="fas fa-sun"></i>
+                    <i id='iconToday' class=""></i>
                 </div>
                 <div id="todayForecast" class="forecastData">
                     <span>Today</span>
                     <span>-</span>
-                    <span id="todayForecastText">Sunny</span>
+                    <span id="todayForecastText"></span>
                 </div>
                 <div id="todayTemperature" class="forecastTemp">
                     <span id="todayLowTemp">--</span>
@@ -54,12 +55,12 @@
             <div id="separatorForecast"></div>
             <div id="tomorrowForecast"  class="forecastContainer">
                 <div id="iconTomorrowContainer" class="iconForecast">
-                    <i id='iconTomorrow' class="fas fa-sun"></i>
+                    <i id='iconTomorrow' class=""></i>
                 </div>
                 <div id="tomorrowForecast" class="forecastData">
                     <span>Tomorrow</span>
                     <span>-</span>
-                    <span id="tomorrowForecastText">Thunderstorm</span>
+                    <span id="tomorrowForecastText"></span>
                 </div>
                 <div id="tomorrowTemperature" class="forecastTemp">
                     <span id="tomorrowLowTemp">--</span>
@@ -71,12 +72,12 @@
             <div id="separatorForecast"></div>
             <div id="2daysForecast" class="forecastContainer">
                 <div id="icon2DaysContainer" class="iconForecast">
-                    <i id='icon2Days' class="fas fa-sun"></i>
+                    <i id='icon2Days' class=""></i>
                 </div>
                 <div id="2DaysForecast" class="forecastData">
                     <span id="day2">---</span>
                     <span>-</span>
-                    <span id="2DaysForecastText">Thunderstorm</span>
+                    <span id="2DaysForecastText"></span>
                 </div>
                 <div id="2DaysTemperature" class="forecastTemp">
                     <span id="2DaysLowTemp">--</span>

@@ -4,8 +4,7 @@ body{
 }
 
 .body-Content{
-    border: red;
-    border-style: dashed;
+
     margin-left: auto;
     margin-right: auto;
     width: 800px;
@@ -148,4 +147,9 @@ body{
 .checkButton:hover{
     cursor: pointer;
     color: #999;
+}
+
+.statusMssg{
+    color: red;
+    display: none;
 }
