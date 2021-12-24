@@ -1,8 +1,6 @@
-var ndheliknoID = config.NDHELIK;
-
 async function getCityWeatherData(city) {
     let apiCommand1 = 'https://api.openweathermap.org/data/2.5/weather?q=';
-    let apiCommand2 = '&units=metric&appid='+ndheliknoID;
+    let apiCommand2 = '&units=metric&appid=581902cd2fc7389eb203b18fc740d174';
     let apiCommand = apiCommand1+city+apiCommand2;
     try {
         let response = await fetch(apiCommand, {mode: "cors"});
@@ -46,7 +44,7 @@ async function updateWeather(city){
 async function getWeatherForecast(lat,lon){
     let apiCommand1 = 'https://api.openweathermap.org/data/2.5/onecall?lat=';
     let apiCommand2 = '&lon=';
-    let apiCommand3 = '&units=metric&exclude=current,minutely,hourly,alerts&appid='+ndheliknoID;
+    let apiCommand3 = '&units=metric&exclude=current,minutely,hourly,alerts&appid=581902cd2fc7389eb203b18fc740d174';
     let apiCommand = apiCommand1 + lat + apiCommand2 + lon +apiCommand3;
     try{
         let response = await fetch(apiCommand, {mode: "cors"});
