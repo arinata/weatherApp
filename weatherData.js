@@ -2,7 +2,6 @@ var ndheliknoID = config.NDHELIK;
 
 async function getCityWeatherData(city) {
     let apiCommand1 = 'https://api.openweathermap.org/data/2.5/weather?q=';
-    //let apiCommand2 = '&units=metric&appid=aa5e56383cb2aaca5fa26bcf40a270da';
     let apiCommand2 = '&units=metric&appid='+ndheliknoID;
     let apiCommand = apiCommand1+city+apiCommand2;
     try {
