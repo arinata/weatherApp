@@ -3,7 +3,7 @@ async function getCityWeatherData(city) {
     let apiCommand2 = '&units=metric&appid=aa5e56383cb2aaca5fa26bcf40a270da';
     let apiCommand = apiCommand1+city+apiCommand2;
     try {
-        let response = await fetch(apiCommand, {mode: 'cors'});
+        let response = await fetch(apiCommand, {mode: "cors"});
         let weatherData = await response.json();
         if(response.status == 404){
             resetDisplay();
@@ -42,12 +42,12 @@ async function updateWeather(city){
 }
 
 async function getWeatherForecast(lat,lon){
-    let apiCommand1 = 'http://api.openweathermap.org/data/2.5/onecall?lat=';
+    let apiCommand1 = 'https://api.openweathermap.org/data/2.5/onecall?lat=';
     let apiCommand2 = '&lon=';
     let apiCommand3 = '&units=metric&exclude=current,minutely,hourly,alerts&appid=aa5e56383cb2aaca5fa26bcf40a270da';
     let apiCommand = apiCommand1 + lat + apiCommand2 + lon +apiCommand3;
     try{
-        let response = await fetch(apiCommand, {mode: 'cors'});
+        let response = await fetch(apiCommand, {mode: "cors"});
         let forecastData = await response.json();
         if(response.status == 404){
             resetDisplay();
